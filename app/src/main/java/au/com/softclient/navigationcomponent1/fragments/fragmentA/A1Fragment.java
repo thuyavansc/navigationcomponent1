@@ -3,6 +3,8 @@ package au.com.softclient.navigationcomponent1.fragments.fragmentA;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -61,6 +63,22 @@ public class A1Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_a1, container, false);
+        //return inflater.inflate(R.layout.fragment_a1, container, false);
+        View view = inflater.inflate(R.layout.fragment_a1, container, false);
+
+        // Find the button and set an OnClickListener
+        view.findViewById(R.id.buttonA1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to FragmentA1
+                NavController navController = Navigation.findNavController(v);
+                navController.navigate(R.id.action_a1Fragment_to_a2Fragment);
+                //navController.navigate(R.id.action_AFragment_to_a1Fragment, new NavOptions.Builder().setPopUpTo(R.id.fragment_a, true).build());
+
+            }
+
+        });
+
+        return view;
     }
 }

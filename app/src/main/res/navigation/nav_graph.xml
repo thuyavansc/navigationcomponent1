@@ -17,7 +17,11 @@
         android:id="@+id/BFragment"
         android:name="au.com.softclient.navigationcomponent1.fragments.fragmentB.BFragment"
         android:label="fragment_b"
-        tools:layout="@layout/fragment_b" />
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_BFragment_to_b1Fragment"
+            app:destination="@id/b1Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/CFragment"
         android:name="au.com.softclient.navigationcomponent1.fragments.fragmentC.CFragment"
@@ -32,5 +36,33 @@
         android:id="@+id/a1Fragment"
         android:name="au.com.softclient.navigationcomponent1.fragments.fragmentA.A1Fragment"
         android:label="fragment_a1"
-        tools:layout="@layout/fragment_a1" />
+        tools:layout="@layout/fragment_a1" >
+        <action
+            android:id="@+id/action_a1Fragment_to_a2Fragment"
+            app:destination="@id/a2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/b1Fragment"
+        android:name="au.com.softclient.navigationcomponent1.fragments.fragmentB.B1Fragment"
+        android:label="fragment_b1"
+        tools:layout="@layout/fragment_b1" >
+        <action
+            android:id="@+id/action_b1Fragment_to_a2Fragment"
+            app:destination="@id/a2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/c1Fragment"
+        android:name="au.com.softclient.navigationcomponent1.fragments.fragmentC.C1Fragment"
+        android:label="fragment_c1"
+        tools:layout="@layout/fragment_c1" />
+    <fragment
+        android:id="@+id/d1Fragment"
+        android:name="au.com.softclient.navigationcomponent1.fragments.fragmentD.D1Fragment"
+        android:label="fragment_d1"
+        tools:layout="@layout/fragment_d1" />
+    <fragment
+        android:id="@+id/a2Fragment"
+        android:name="au.com.softclient.navigationcomponent1.fragments.fragmentA.A2Fragment"
+        android:label="fragment_a2"
+        tools:layout="@layout/fragment_a2" />
 </navigation>
