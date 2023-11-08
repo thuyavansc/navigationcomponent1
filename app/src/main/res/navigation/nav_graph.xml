@@ -8,7 +8,11 @@
         android:id="@+id/AFragment"
         android:name="au.com.softclient.navigationcomponent1.fragments.fragmentA.AFragment"
         android:label="fragment_a"
-        tools:layout="@layout/fragment_a" />
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_AFragment_to_a1Fragment"
+            app:destination="@id/a1Fragment" />
+    </fragment>
     <fragment
         android:id="@+id/BFragment"
         android:name="au.com.softclient.navigationcomponent1.fragments.fragmentB.BFragment"
@@ -24,4 +28,9 @@
         android:name="au.com.softclient.navigationcomponent1.fragments.fragmentD.DFragment"
         android:label="fragment_d"
         tools:layout="@layout/fragment_d" />
+    <fragment
+        android:id="@+id/a1Fragment"
+        android:name="au.com.softclient.navigationcomponent1.fragments.fragmentA.A1Fragment"
+        android:label="fragment_a1"
+        tools:layout="@layout/fragment_a1" />
 </navigation>
