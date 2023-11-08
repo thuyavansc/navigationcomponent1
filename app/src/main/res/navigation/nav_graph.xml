@@ -11,7 +11,9 @@
         tools:layout="@layout/fragment_a" >
         <action
             android:id="@+id/action_AFragment_to_a1Fragment"
-            app:destination="@id/a1Fragment" />
+            app:destination="@id/a1Fragment"
+            app:popUpTo="@id/AFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/BFragment"
